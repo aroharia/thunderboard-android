@@ -64,8 +64,8 @@ public class DemosSelectionActivity extends ThunderBoardActivity implements Demo
         component().inject(this);
 
         setSupportActionBar(toolbar);
-        toolbar.setBackgroundColor(getResourceColor(R.color.sl_terbium_green));
-        toolbar.setTitle(getString(R.string.thunderboard));
+        toolbar.setBackgroundColor(getResourceColor(R.color.prometium_blue));
+        toolbar.setTitle("Test");
 
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) toolbar.getLayoutParams();
         params.height += getStatusBarHeight();
@@ -197,6 +197,10 @@ public class DemosSelectionActivity extends ThunderBoardActivity implements Demo
                 DemoEnvironmentActivity.isDemoAllowed()));
         demosList.add(new Demo(getString(R.string.demo_io),
                 R.drawable.ic_io,
+                DemoIOActivity.class,
+                DemoIOActivity.isDemoAllowed()));
+        demosList.add(new Demo("Test",
+                R.drawable.ic_launcher,
                 DemoIOActivity.class,
                 DemoIOActivity.isDemoAllowed()));
     }
